@@ -56,19 +56,20 @@ function loadSignatureFromStorage() {
       if (Object.keys(savedData).length > 0) {
         const converter = new QuillDeltaToHtmlConverter(savedData.ops, {});
         const signature = converter.convert();
-        const signatureElement = htmlToElement(signature);
-        signatureElement.classList.add('graf', 'graf--p', 'graf-after--p', 'graf--trailing', 'is-selected');
-
-        const selectedElemenet = document.querySelector('.is-selected');
-        selectedElemenet.classList.remove('is-selected', 'graf--trailing');
-        selectedElemenet.parentNode.insertBefore(signatureElement, selectedElemenet.nextSibling);
+        copyToClipboard(signature);
+        pasteSignature();
       }
     });
 }
 
-function htmlToElement(html) {
-  const template = document.createElement('template');
-  html = html.trim();
-  template.innerHTML = html;
-  return template.content.firstChild;
+function copyToClipboard(text) {
+  const dt = new clipboard.DT();
+  dt.setData('text/html', text);
+  clipboard.write(dt);
+}
+
+function pasteSignature() {
+  const selectedElement = document.querySelector('.is-selected');
+  selectedElement.focus();
+  document.execCommand('paste');
 }

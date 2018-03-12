@@ -11,6 +11,8 @@
   },
   
   "permissions": [
+    "clipboardRead",
+    "clipboardWrite",
     "storage"
   ],
 
@@ -21,7 +23,7 @@
   "content_scripts": [
     {
       "matches": ["*://*.medium.com/*"],
-      "js": ["content/vendor/quill-delta-to-html.js", "content/insertSignature.js"],
+      "js": ["content/vendor/quill-delta-to-html.js", "content/vendor/clipboard-polyfill.js", "content/insertSignature.js"],
       "css": ["content/modifiedTooltip.css"]
     }
   ],
