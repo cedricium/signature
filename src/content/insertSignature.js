@@ -37,7 +37,7 @@ function createSignatureButton() {
   inlineTooltip.style.width = '360px';
 
   const signatureBtn = document.createElement('button');
-  signatureBtn.classList.add('button', 'button--small', 'button--circle', 'button--dark', 'button--withChrome', 'u-baseColor--buttonDark', 'button--withIcon');
+  signatureBtn.classList.add('button', 'button--small', 'button--circle', 'button--dark', 'button--withChrome', 'u-baseColor--buttonDark', 'button--withIcon', 'ms-icon');
   signatureBtn.title = 'Add your Medium Signature';
   signatureBtn.setAttribute('aria-label', 'Add your Medium Signature');
 

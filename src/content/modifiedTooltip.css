@@ -1,4 +1,7 @@
-div.ms-icon {
-  display: inline;
-  background: url('pen.jpg') no-repeat black;
+.ms-icon {
+  background: url("nib-icon.svg") no-repeat;
+  background-size: 85%;
+  background-position: top;
+  transform: rotate(220deg);
+  display: inline-block;
 }
