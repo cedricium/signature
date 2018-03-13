@@ -5,6 +5,7 @@
   "scripts": {
     "postinstall": "node scripts/postinstall.js",
     "start": "web-ext run -s src",
+    "start-nightly": "npm start -- -f nightly",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
