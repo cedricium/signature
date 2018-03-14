@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  
+  "name": "Signature",
+  "version": "1.0.0",
+  "description": "Signatures for Medium.com",
+
+  "permissions": [
+    "clipboardRead",
+    "clipboardWrite",
+    "storage"
+  ],
+
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.medium.com/*"],
+      "js": ["content/vendor/quill-delta-to-html.js", "content/vendor/clipboard-polyfill.js", "content/insertSignature.js"],
+      "css": ["content/modifiedTooltip.css"]
+    }
+  ],
+
+  "options_ui": {
+    "chrome_style": false,
+    "page": "settings/settings.html"
+  },
+
+  "web_accessible_resources": [
+    "content/*.svg"
+  ]
+}
