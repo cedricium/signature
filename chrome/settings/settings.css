@@ -1,0 +1,8 @@
+body {
+  margin: 1.5rem 1rem;
+}
+
+div#editor {
+  width: 600px;
+  margin-bottom: 0.75rem;
+}

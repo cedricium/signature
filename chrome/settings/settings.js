@@ -1,10 +1,17 @@
+const toolbarOptions = {
+  container: [
+    ['bold', 'italic'],
+    [{'header': 1}, 'blockquote', 'code-block'],
+    ['link', {'list': 'bullet'}, {'list': 'ordered'}],
+  ],
+  handlers: {'emoji': function() {}}
+};
+
 const editor = new Quill('#editor', {
   modules: {
-    toolbar: [
-      ['bold', 'italic'],
-      [{'header': 1}, 'blockquote', 'code-block'],
-      ['link', {'list': 'bullet'}, {'list': 'ordered'}],
-    ]
+    toolbar: toolbarOptions,
+    toolbar_emoji: true,
+    short_name_emoji: true
   },
   placeholder: 'Compose your Medium signature...',
   theme: 'snow'

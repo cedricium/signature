@@ -30,6 +30,9 @@
   },
 
   "web_accessible_resources": [
-    "content/*.svg"
+    "content/*.svg",
+    "settings/vendor/*.png",
+    "settings/vendor/*.js",
+    "settings/vendor/*.css"
   ]
 }
