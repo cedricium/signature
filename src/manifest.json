@@ -1,15 +1,15 @@
 {
   "manifest_version": 2,
+
   "name": "Signature",
   "version": "1.0.0",
-  
-  "description": "",
-  
+  "description": "Signatures for Medium.com",
+
   "icons": {
     "64": "icons/icon-64.png",
-      "128": "icons/icon-128.png"
+    "128": "icons/icon-128.png"
   },
-  
+
   "permissions": [
     "clipboardRead",
     "clipboardWrite",
@@ -27,7 +27,7 @@
       "css": ["content/modifiedTooltip.css"]
     }
   ],
-  
+
   "options_ui": {
     "browser_style": false,
     "page": "settings/settings.html"
