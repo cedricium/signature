@@ -16,6 +16,12 @@ saveBtn.addEventListener('click', () => {
   saveSignatureToStorage(contents);
 });
 
+const clearBtn = document.querySelector('.button.clear');
+clearBtn.addEventListener('click', () => {
+  const editorLength = editor.getLength();
+  editor.deleteText(0, editorLength, 'api');
+});
+
 function loadSignatureFromStorage() {
   browser.storage.local.get(null)
     .then(savedData => {

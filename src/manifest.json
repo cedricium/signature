@@ -30,6 +30,7 @@
 
   "options_ui": {
     "browser_style": false,
-    "page": "settings/settings.html"
+    "page": "settings/settings.html",
+    "open_in_tab": true
   }
 }
