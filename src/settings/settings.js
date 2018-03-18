@@ -22,6 +22,22 @@ clearBtn.addEventListener('click', () => {
   editor.deleteText(0, editorLength, 'api');
 });
 
+const hideNotificationBtn = document.querySelector('button.delete');
+const notification = hideNotificationBtn.parentElement;
+hideNotificationBtn.addEventListener('click', () => {
+  notification.classList.add('is-hidden');
+});
+
+browser.runtime.onMessage.addListener(eventData => {
+  switch (eventData.action) {
+    case 'enable_warning':
+      notification.classList.remove('is-hidden');
+      break;
+    default:
+      break;
+  }
+});
+
 function loadSignatureFromStorage() {
   browser.storage.local.get(null)
     .then(savedData => {

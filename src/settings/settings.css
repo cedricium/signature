@@ -25,7 +25,9 @@ body {
 .title { font-weight: 800; }
 .subtitle { font-weight: 600; }
 
-div.field.is-grouped.button-group { margin-top: 1rem; }
+div#editor {
+  margin-bottom: 1rem;
+}
 
 
 /*

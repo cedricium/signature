@@ -43,9 +43,8 @@ function createSignatureButton() {
 
   inlineTooltipMenu.appendChild(signatureBtn);
 
-  signatureBtn.addEventListener('click', () => {
-    console.log('signature button clicked!');
-    // get saved signature
+  signatureBtn.addEventListener('click', (event) => {
+    event.preventDefault();
     loadSignatureFromStorage();
   });
 }
@@ -53,11 +52,15 @@ function createSignatureButton() {
 function loadSignatureFromStorage() {
   browser.storage.local.get(null)
     .then(savedData => {
-      if (Object.keys(savedData).length > 0) {
+      if (Object.keys(savedData).length > 0 && savedData.ops[0].insert !== '\n') {
         const converter = new QuillDeltaToHtmlConverter(savedData.ops, {});
         const signature = converter.convert();
         copyToClipboard(signature);
         pasteSignature();
+      } else {
+        browser.runtime.sendMessage({
+          action: 'open_options_page'
+        });
       }
     });
 }
