@@ -13,6 +13,11 @@ const files = [
   copySync('node_modules/clipboard-polyfill/LICENSE.md', 'src/content/vendor/clipboard-polyfill.LICENSE'),
   copySync('node_modules/clipboard-polyfill/build/clipboard-polyfill.js', 'src/content/vendor/clipboard-polyfill.js'),
 
+  copySync('node_modules/quill-emoji/dist/quill-emoji.css', 'src/settings/vendor/quill-emoji.css'),
+  copySync('node_modules/quill-emoji/dist/quill-emoji.js', 'src/settings/vendor/quill-emoji.js'),
+
+  copySync('node_modules/bulma/css/bulma.css', 'src/settings/vendor/bulma.css'),
+
   // Chrome Extension
   copySync('node_modules/quill/LICENSE', 'chrome/settings/vendor/quill.LICENSE'),
   copySync('node_modules/quill/dist/quill.min.js', 'chrome/settings/vendor/quill.js'),
@@ -24,11 +29,10 @@ const files = [
   copySync('node_modules/clipboard-polyfill/LICENSE.md', 'chrome/content/vendor/clipboard-polyfill.LICENSE'),
   copySync('node_modules/clipboard-polyfill/build/clipboard-polyfill.js', 'chrome/content/vendor/clipboard-polyfill.js'),
 
-  copySync('node_modules/quill-emoji/dist/quill-emoji.css', 'src/settings/vendor/quill-emoji.css'),
-  copySync('node_modules/quill-emoji/dist/quill-emoji.js', 'src/settings/vendor/quill-emoji.js'),
-
   copySync('node_modules/quill-emoji/dist/quill-emoji.css', 'chrome/settings/vendor/quill-emoji.css'),
-  copySync('node_modules/quill-emoji/dist/quill-emoji.js', 'chrome/settings/vendor/quill-emoji.js')
+  copySync('node_modules/quill-emoji/dist/quill-emoji.js', 'chrome/settings/vendor/quill-emoji.js'),
+
+  copySync('node_modules/bulma/css/bulma.css', 'chrome/settings/vendor/bulma.css')
 ];
 
 Promise.all(files).catch(err => {

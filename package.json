@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/cedricium/signature#readme",
   "dependencies": {
+    "bulma": "^0.6.2",
     "clipboard-polyfill": "^2.4.6",
     "fs-extra": "^5.0.0",
     "quill": "^1.3.5",
