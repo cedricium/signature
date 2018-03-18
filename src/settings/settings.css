@@ -1,12 +1,32 @@
+/*
+ * Nunito Font Declaration
+ ***************************
+ */
+@font-face {
+  font-family: 'Nunito';
+  src: url('../resources/fonts/Nunito-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('../resources/fonts/Nunito-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+
 html,
 body {
   background: transparent;
+  font-family: 'Nunito', 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .title { font-weight: 800; }
 .subtitle { font-weight: 600; }
 
 div.field.is-grouped.button-group { margin-top: 1rem; }
+
 
 /*
  * Bulma Overrides 
