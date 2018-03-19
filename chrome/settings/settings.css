@@ -1,8 +1,50 @@
+/*
+ * Nunito Font Declaration
+ ***************************
+ */
+ /* @font-face {
+  font-family: 'Nunito';
+  src: url('../resources/fonts/Nunito-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('../resources/fonts/Nunito-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+} */
+
+
+html,
 body {
-  margin: 1.5rem 1rem;
+  background: transparent;
+  font-family: 'Nunito', 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.title { font-weight: 800; }
+.subtitle { font-weight: 600; }
+
 div#editor {
-  width: 600px;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+
+/*
+ * Bulma Overrides 
+ *************************** 
+ */
+
+
+/*
+ * Quill Overrides 
+ *************************** 
+ */
+
+div.ql-toolbar.ql-snow {
+  background: #fafafa;
+}
+
+div.ql-tooltip {
+  z-index: 20;
 }

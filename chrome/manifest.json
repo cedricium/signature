@@ -26,13 +26,11 @@
 
   "options_ui": {
     "chrome_style": false,
-    "page": "settings/settings.html"
+    "page": "settings/settings.html",
+    "open_in_tab": true
   },
 
   "web_accessible_resources": [
-    "content/*.svg",
-    "settings/vendor/*.png",
-    "settings/vendor/*.js",
-    "settings/vendor/*.css"
+    "content/*.svg"
   ]
 }
