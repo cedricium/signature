@@ -10,6 +10,15 @@
     "128": "resources/icons/favicon-256.png"
   },
 
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": {
+      "16": "resources/icons/favicon-256.png",
+      "32": "resources/icons/favicon-256.png"
+    },
+    "default_title": "Signature, for Medium"
+  },
+
   "permissions": [
     "clipboardRead",
     "clipboardWrite",

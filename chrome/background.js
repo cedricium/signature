@@ -20,3 +20,7 @@ chrome.runtime.onMessage.addListener(eventData => {
       break;
   }
 });
+
+chrome.browserAction.onClicked.addListener(() => {
+  chrome.runtime.openOptionsPage();
+});

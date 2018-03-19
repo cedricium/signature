@@ -21,3 +21,7 @@ browser.runtime.onMessage.addListener(eventData => {
       break;
   }
 });
+
+browser.browserAction.onClicked.addListener(() => {
+  browser.runtime.openOptionsPage();
+});
