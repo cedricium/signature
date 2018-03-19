@@ -1,5 +1,4 @@
 .ms-icon {
-  background: url("chrome-extension://hfbpbggbdhplglpopfaapkkpockjkdfn/content/nib-icon.svg") no-repeat !important;
   background-size: 90% !important;
   background-position: top !important;
   transform: rotate(220deg);

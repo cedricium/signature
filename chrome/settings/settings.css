@@ -41,10 +41,8 @@ div#editor {
  *************************** 
  */
 
-div.ql-toolbar.ql-snow {
-  background: #fafafa;
-}
+div.ql-toolbar.ql-snow { background: #fafafa; }
 
-div.ql-tooltip {
-  z-index: 20;
-}
+div.ql-tooltip { z-index: 20; }
+
+ul.emoji_completions { z-index: 20; }

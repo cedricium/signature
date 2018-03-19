@@ -40,6 +40,9 @@ function createSignatureButton() {
   signatureBtn.classList.add('button', 'button--small', 'button--circle', 'button--dark', 'button--withChrome', 'u-baseColor--buttonDark', 'button--withIcon', 'ms-icon');
   signatureBtn.title = 'Add your Medium Signature';
   signatureBtn.setAttribute('aria-label', 'Add your Medium Signature');
+  const signatureBtnIcon = chrome.extension.getURL("content/nib-icon.svg");
+  signatureBtn.style.backgroundImage = `url('${signatureBtnIcon}')`;
+  signatureBtn.style.backgroundRepeat = 'no-repeat';
 
   inlineTooltipMenu.appendChild(signatureBtn);
 
