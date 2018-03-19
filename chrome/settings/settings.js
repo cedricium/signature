@@ -35,15 +35,15 @@ hideNotificationBtn.addEventListener('click', () => {
   notification.classList.add('is-hidden');
 });
 
-// browser.runtime.onMessage.addListener(eventData => {
-//   switch (eventData.action) {
-//     case 'enable_warning':
-//       notification.classList.remove('is-hidden');
-//       break;
-//     default:
-//       break;
-//   }
-// });
+chrome.runtime.onMessage.addListener(eventData => {
+  switch (eventData.action) {
+    case 'enable_warning':
+      notification.classList.remove('is-hidden');
+      break;
+    default:
+      break;
+  }
+});
 
 function loadSignatureFromStorage() {
   chrome.storage.local.get(null, savedData => {
@@ -55,7 +55,7 @@ function loadSignatureFromStorage() {
 
 function saveSignatureToStorage(contents) {
   const signature = contents;
-  chrome.storage.local.set(signature, function () { console.log('signature saved!'); });
+  chrome.storage.local.set(signature, () => { console.log('signature saved!'); });
 }
 
 function setSavedSignature(signature) {

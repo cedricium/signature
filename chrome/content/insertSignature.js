@@ -44,19 +44,21 @@ function createSignatureButton() {
   inlineTooltipMenu.appendChild(signatureBtn);
 
   signatureBtn.addEventListener('click', () => {
-    console.log('signature button clicked!');
-    // get saved signature
     loadSignatureFromStorage();
   });
 }
 
 function loadSignatureFromStorage() {
   chrome.storage.local.get(null, savedData => {
-    if (Object.keys(savedData).length > 0) {
+    if (Object.keys(savedData).length > 0 && savedData.ops[0].insert !== '\n') {
       const converter = new QuillDeltaToHtmlConverter(savedData.ops, {});
       const signature = converter.convert();
       copyToClipboard(signature);
       pasteSignature();
+    } else {
+      chrome.runtime.sendMessage({
+        action: 'open_options_page'
+      });
     }
   });
 }
