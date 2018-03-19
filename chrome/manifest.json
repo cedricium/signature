@@ -1,9 +1,14 @@
 {
   "manifest_version": 2,
-  
+
   "name": "Signature",
   "version": "1.0.0",
-  "description": "Signatures for Medium.com",
+  "description": "Signatures for Medium, simplified.",
+
+  "icons": {
+    "64": "resources/icons/favicon-256.png",
+    "128": "resources/icons/favicon-256.png"
+  },
 
   "permissions": [
     "clipboardRead",
@@ -12,7 +17,7 @@
   ],
 
   "background": {
-    "persistent": false,
+    "persistent": true,
     "scripts": ["background.js"]
   },
 

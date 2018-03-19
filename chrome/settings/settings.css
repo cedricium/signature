@@ -2,7 +2,7 @@
  * Nunito Font Declaration
  ***************************
  */
- /* @font-face {
+ @font-face {
   font-family: 'Nunito';
   src: url('../resources/fonts/Nunito-SemiBold.ttf') format('truetype');
   font-weight: 600;
@@ -13,7 +13,7 @@
   src: url('../resources/fonts/Nunito-ExtraBold.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;
-} */
+}
 
 
 html,
