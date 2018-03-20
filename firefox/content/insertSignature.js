@@ -1,6 +1,5 @@
 // on each hashchange (for Medium.com), check for `inlineTooltip`
 (function () {
-  console.log('started!');
   startScript();
 })();
 
@@ -11,10 +10,7 @@ function startScript () {
       previousUrl = location.href;
       const hasInlineTooltip = doesInlineTooltipExist();
       if (hasInlineTooltip) {
-        console.log('has inlinetooltip');
         createSignatureButton();
-      } else {
-        console.log('does not have inlinetooltip');
       }
     }
   }, 250);

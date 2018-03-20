@@ -55,7 +55,7 @@ function loadSignatureFromStorage () {
 
 function saveSignatureToStorage (contents) {
   const signature = contents;
-  chrome.storage.local.set(signature, () => { console.log('signature saved!'); });
+  chrome.storage.local.set(signature, function () {});
 }
 
 function setSavedSignature (signature) {
