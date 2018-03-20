@@ -32,5 +32,8 @@
     "quill": "^1.3.5",
     "quill-delta-to-html": "^0.7.2",
     "quill-emoji": "0.0.9"
+  },
+  "devDependencies": {
+    "web-ext": "^2.5.0"
   }
 }
