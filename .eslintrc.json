@@ -1,0 +1,14 @@
+{
+    "extends": "standard",
+    "rules": {
+        "semi": 0
+    },
+    "globals": {
+        "chrome": false,
+        "browser": false,
+        "location": false,
+        "QuillDeltaToHtmlConverter": false,
+        "clipboard": false,
+        "Quill": false
+    }
+}
