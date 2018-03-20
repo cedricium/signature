@@ -2,9 +2,9 @@ const toolbarOptions = {
   container: [
     ['bold', 'italic'],
     [{'header': 1}, 'blockquote', 'code-block'],
-    ['link', {'list': 'bullet'}, {'list': 'ordered'}],
+    ['link', {'list': 'bullet'}, {'list': 'ordered'}]
   ],
-  handlers: {'emoji': function() {}}
+  handlers: {'emoji': function () {}}
 };
 
 const editor = new Quill('#editor', {
@@ -19,7 +19,7 @@ const editor = new Quill('#editor', {
 
 const saveBtn = document.querySelector('.button.save');
 saveBtn.addEventListener('click', () => {
-  const contents = editor.getContents();  // => returns a Quill Delta object
+  const contents = editor.getContents(); // => returns a Quill Delta object
   saveSignatureToStorage(contents);
 });
 
@@ -45,7 +45,7 @@ chrome.runtime.onMessage.addListener(eventData => {
   }
 });
 
-function loadSignatureFromStorage() {
+function loadSignatureFromStorage () {
   chrome.storage.local.get(null, savedData => {
     if (Object.keys(savedData).length > 0) {
       setSavedSignature(savedData);
@@ -53,12 +53,12 @@ function loadSignatureFromStorage() {
   });
 }
 
-function saveSignatureToStorage(contents) {
+function saveSignatureToStorage (contents) {
   const signature = contents;
   chrome.storage.local.set(signature, () => { console.log('signature saved!'); });
 }
 
-function setSavedSignature(signature) {
+function setSavedSignature (signature) {
   editor.setContents(signature);
 }
 
