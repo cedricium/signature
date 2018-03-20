@@ -1,7 +1,7 @@
 <p align="center">
-  <img src="readme_resources/signature_banner.png" height="108">
+  <img src="readme_resources/signature_banner.png" height="84">
 </p>
-<h4 align="center">Medium signatures, simplified.</h4>
+<h3 align="center">Medium signatures, simplified.</h3>
 
 Signature is a browser extension (currently for Chrome and Firefox) that saves writers and editors of Medium.com time from having to copy and paste their blog's signature / sign-off by providing a native inline-tooltip button on Medium that pastes the signature in a single click of the button.
 
@@ -17,7 +17,9 @@ Quincy Larson, the "teacher and guy who started it [freeCodeCamp]", used this at
 
 Let's see how it works!
 
-[signature_demo.gif]
+<div align="center">
+  <img src="readme_resources/signature_demo.gif">
+</div>
 
 
 ## Getting Started
