@@ -29,16 +29,14 @@ clearBtn.addEventListener('click', () => {
   editor.deleteText(0, editorLength, 'api');
 });
 
-const hideNotificationBtn = document.querySelector('button.delete');
-const notification = hideNotificationBtn.parentElement;
-hideNotificationBtn.addEventListener('click', () => {
-  notification.classList.add('is-hidden');
-});
+// Notifications used for displaying info to the user to provide better UX
+const warningNotification = document.querySelector('div.notification.warning');
+const successNotification = document.querySelector('div.notification.success');
 
 chrome.runtime.onMessage.addListener(eventData => {
   switch (eventData.action) {
     case 'enable_warning':
-      notification.classList.remove('is-hidden');
+      showNotification(warningNotification);
       break;
     default:
       break;
@@ -55,11 +53,20 @@ function loadSignatureFromStorage () {
 
 function saveSignatureToStorage (contents) {
   const signature = contents;
-  chrome.storage.local.set(signature, function () {});
+  chrome.storage.local.set(signature, () => {
+    showNotification(successNotification);
+  });
 }
 
 function setSavedSignature (signature) {
   editor.setContents(signature);
+}
+
+function showNotification (notification) {
+  notification.classList.remove('is-hidden');
+  setTimeout(() => {
+    notification.classList.add('is-hidden');
+  }, 3000);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
