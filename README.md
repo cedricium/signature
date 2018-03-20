@@ -1,5 +1,7 @@
-# ✍️ Signature
-### Medium signatures, simplified.
+<p align="center">
+  <img src="readme_resources/signature_banner.png" height="108">
+</p>
+<h4 align="center">Medium signatures, simplified.</h4>
 
 Signature is a browser extension (currently for Chrome and Firefox) that saves writers and editors of Medium.com time from having to copy and paste their blog's signature / sign-off by providing a native inline-tooltip button on Medium that pastes the signature in a single click of the button.
 
