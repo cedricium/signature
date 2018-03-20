@@ -1,37 +1,34 @@
 // on each hashchange (for Medium.com), check for `inlineTooltip`
 (function () {
-  console.log('started!');
   startScript();
 })();
 
-function startScript() {
+function startScript () {
   let previousUrl = location.href;
   window.setInterval(() => {
     if (previousUrl !== location.href) {
       previousUrl = location.href;
       const hasInlineTooltip = doesInlineTooltipExist();
       if (hasInlineTooltip) {
-        console.log('has inlinetooltip');
         createSignatureButton();
-      } else {
-        console.log('does not have inlinetooltip');
       }
     }
   }, 250);
 }
 
-function doesInlineTooltipExist() {
+function doesInlineTooltipExist () {
   // edge case: medium.com/new-story --> medium.com/p/<random-hashed-id>/edit
   // this occurs when the user creates a new story then gives the article some text
   // to a totally new / blank story.
-  if (location.href === 'https://medium.com/new-story')
+  if (location.href === 'https://medium.com/new-story') {
     return false;
+  }
 
   return document.querySelector('.inlineTooltip');
 }
 
 // wrap creating button and adding to tooltip in a function
-function createSignatureButton() {
+function createSignatureButton () {
   const inlineTooltip = document.querySelector('.inlineTooltip');
   const inlineTooltipMenu = document.querySelector('.inlineTooltip-menu');
   inlineTooltip.style.width = '360px';
@@ -40,7 +37,7 @@ function createSignatureButton() {
   signatureBtn.classList.add('button', 'button--small', 'button--circle', 'button--dark', 'button--withChrome', 'u-baseColor--buttonDark', 'button--withIcon', 'ms-icon');
   signatureBtn.title = 'Add your Medium Signature';
   signatureBtn.setAttribute('aria-label', 'Add your Medium Signature');
-  const signatureBtnIcon = chrome.extension.getURL("content/nib-icon.svg");
+  const signatureBtnIcon = chrome.extension.getURL('content/nib-icon.svg');
   signatureBtn.style.backgroundImage = `url('${signatureBtnIcon}')`;
   signatureBtn.style.backgroundRepeat = 'no-repeat';
 
@@ -51,7 +48,7 @@ function createSignatureButton() {
   });
 }
 
-function loadSignatureFromStorage() {
+function loadSignatureFromStorage () {
   chrome.storage.local.get(null, savedData => {
     if (Object.keys(savedData).length > 0 && savedData.ops[0].insert !== '\n') {
       const converter = new QuillDeltaToHtmlConverter(savedData.ops, {});
@@ -66,13 +63,13 @@ function loadSignatureFromStorage() {
   });
 }
 
-function copyToClipboard(text) {
+function copyToClipboard (text) {
   const dt = new clipboard.DT();
   dt.setData('text/html', text);
   clipboard.write(dt);
 }
 
-function pasteSignature() {
+function pasteSignature () {
   const selectedElement = document.querySelector('.is-selected');
   selectedElement.focus();
   document.execCommand('paste');
