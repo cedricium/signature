@@ -23,11 +23,11 @@ function startScript () {
 }
 
 function doesInlineTooltipExist () {
-  return document.querySelector('.inlineTooltip');
+  return !!document.querySelector('.inlineTooltip');
 }
 
 function doesSignatureBtnExist () {
-  return document.querySelector('button.button.ms-icon');
+  return !!document.querySelector('button.button.ms-icon');
 }
 
 // wrap creating button and adding to tooltip in a function
