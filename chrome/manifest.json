@@ -46,5 +46,13 @@
 
   "web_accessible_resources": [
     "content/*.svg"
-  ]
+  ],
+
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+S"
+      }
+    }
+  }
 }
