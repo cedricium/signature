@@ -9,7 +9,13 @@ function startScript () {
     if (previousUrl !== location.href) {
       previousUrl = location.href;
       const hasInlineTooltip = doesInlineTooltipExist();
-      if (hasInlineTooltip) {
+      const hasSignatureBtn = doesSignatureBtnExist();
+      // Check to see if inline-tooltip exists and that there is no previous Signature
+      // button before creating a new one. This corrects the edge case of
+      // `medium.com/new-story` changing to `medium.com/p/<some_hash>/edit` which
+      // resulted in a duplicate Signature button being added.
+      // Refs: https://github.com/cedricium/signature/issues/7
+      if (hasInlineTooltip && !hasSignatureBtn) {
         createSignatureButton();
       }
     }
@@ -17,14 +23,11 @@ function startScript () {
 }
 
 function doesInlineTooltipExist () {
-  // edge case: medium.com/new-story --> medium.com/p/<random-hashed-id>/edit
-  // this occurs when the user creates a new story then gives the article some text
-  // to a totally new / blank story.
-  if (location.href === 'https://medium.com/new-story') {
-    return false;
-  }
+  return !!document.querySelector('.inlineTooltip');
+}
 
-  return document.querySelector('.inlineTooltip');
+function doesSignatureBtnExist () {
+  return !!document.querySelector('button.button.ms-icon');
 }
 
 // wrap creating button and adding to tooltip in a function
