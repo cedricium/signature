@@ -35,6 +35,7 @@ div#editor {
  *************************** 
  */
 
+footer.footer { background: transparent; }
 
 /*
  * Quill Overrides 
