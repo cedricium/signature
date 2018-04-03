@@ -21,6 +21,18 @@ Let's see how it works!
   <img src="readme_resources/signature_demo.gif">
 </div>
 
+## Download
+Click the badges below to download the latest version of *Signature* for your respective browser.
+
+<p align="left">
+  <a href="https://addons.mozilla.org/en-US/firefox/addon/medium-signature/">
+    <img src="https://raw.githubusercontent.com/cedricium/RapidTabOpener/settings-page/res/ff_badge.png" width="33%"/>
+  </a>
+  <a href="https://chrome.google.com/webstore/detail/signature/hgabbjfneihcmbbcnbnfdnfdcbpodnhp">
+    <img src="https://embedsignage.com/wp-content/uploads/2016/04/embed-signage-chromeos-web-store-button.png" width="33%"/>
+  </a>
+</p>
+
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
