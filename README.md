@@ -26,10 +26,10 @@ Click the badges below to download the latest version of *Signature* for your re
 
 <p align="left">
   <a href="https://addons.mozilla.org/en-US/firefox/addon/medium-signature/">
-    <img src="https://raw.githubusercontent.com/cedricium/RapidTabOpener/settings-page/res/ff_badge.png" width="33%"/>
+    <img src="https://raw.githubusercontent.com/cedricium/RapidTabOpener/settings-page/res/ff_badge.png" width="25%"/>
   </a>
   <a href="https://chrome.google.com/webstore/detail/signature/hgabbjfneihcmbbcnbnfdnfdcbpodnhp">
-    <img src="https://embedsignage.com/wp-content/uploads/2016/04/embed-signage-chromeos-web-store-button.png" width="33%"/>
+    <img src="https://embedsignage.com/wp-content/uploads/2016/04/embed-signage-chromeos-web-store-button.png" width="25%"/>
   </a>
 </p>
 
