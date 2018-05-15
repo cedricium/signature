@@ -59,5 +59,6 @@ typings/
 
 # Vendor-specifc files
 */*/vendor/*
+!docs/css/vendor/*
 
 *.DS_Store
